@@ -1,7 +1,7 @@
-# MYC compile
+# Mini C compile
 
-## 使用环境
-该项目实现了一个简单的类`C`语言编译器，使用`flex,bison和llvm`完成编写，并使用`clang`进行最后可执行文件的编译。
+## 使用環境
+該項目實現了一個簡單的類`C`語言編譯器，使用`flex,bison和llvm`完成編寫，並使用`clang`進行最後可執行文件的編譯。
 
 * OS：Linux
 * flex
@@ -9,19 +9,19 @@
 * llvm：10.0.0.1
 * clang
 
-配置环境有两种方法：
+配置環境有兩種方法：
 
-1. 直接手动安装所有的依赖项
-2. 我们将必要的`llvm`等组件封装到了`d1msh1mm32/ccompiler:1.0`的`docker`镜像中，所以只需要安装好·，使用 `docker`拉取该镜像。详细方法可以查看`docker/readme.md`文件
+1. 直接手動安裝所有的依賴項
+2. 我們將必要的`llvm`等組件封裝到了`d1msh1mm32/ccompiler:1.0`的`docker`鏡像中，所以只需要安裝好·，使用 `docker`拉取該鏡像。詳細方法可以查看`docker/readme.md`文件
 
-## 编译方法
+## 編譯方法
 
-1. 进入`src`文件夹，使用`make`工具编译，即可生成可执行文件`parser`
-2. 运行可执行文件`parser`。通过`./parser xx.c`编译`.c`文件，生成文件`example.bc`，该文件为二进制文件，可以通过llvm的命令执行。同时，命令行中会打印出对应的llvm IR代码，以供参阅。
-3. 输入`lli example.bc`即可运行二进制文件`example.bc`
-4. 为了查看其输出，可以使用`echo $?`
+1. 進入`src`文件夾，使用`make`工具編譯，即可生成可執行文件`parser`
+2. 運行可執行文件`parser`。通過`./parser xx.c`編譯`.c`文件，生成文件`example.bc`，該文件為二進制文件，可以通過llvm的命令執行。同時，命令行中會打印出對應的llvm IR代碼，以供參閱。
+3. 輸入`lli example.bc`即可運行二進制文件`example.bc`
+4. 為了查看其輸出，可以使用`echo $?`
 
-## 文件结构
+## 文件結構
 
 ```shell
 .
